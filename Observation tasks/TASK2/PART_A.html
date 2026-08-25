@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTML5 Canvas</title>
+</head>
+
+<body>
+
+    <h2>HTML5 Canvas Graphics</h2>
+
+    <canvas id="myCanvas"
+            width="600"
+            height="300"
+            style="border: 2px solid black;">
+    </canvas>
+
+    <script>
+
+        // Get canvas
+        const canvas =
+            document.getElementById("myCanvas");
+
+        // Get 2D context
+        const ctx =
+            canvas.getContext("2d");
+
+
+        // ==========================
+        // RECTANGLE
+        // ==========================
+
+        ctx.fillStyle = "skyblue";
+
+        ctx.fillRect(
+            50,
+            50,
+            150,
+            100
+        );
+
+
+        // ==========================
+        // CIRCLE
+        // ==========================
+
+        ctx.beginPath();
+
+        ctx.arc(
+            300,
+            100,
+            50,
+            0,
+            2 * Math.PI
+        );
+
+        ctx.fillStyle = "orange";
+
+        ctx.fill();
+
+        ctx.closePath();
+
+
+        // ==========================
+        // LINE
+        // ==========================
+
+        ctx.beginPath();
+
+        ctx.moveTo(400, 50);
+
+        ctx.lineTo(550, 150);
+
+        ctx.strokeStyle = "green";
+
+        ctx.lineWidth = 5;
+
+        ctx.stroke();
+
+        ctx.closePath();
+
+
+        // ==========================
+        // NAME
+        // ==========================
+
+        ctx.font = "bold 25px Arial";
+
+        ctx.fillStyle = "black";
+
+        ctx.fillText(
+            "Srivalli",
+            230,
+            240
+        );
+
+    </script>
+
+</body>
+</html>
