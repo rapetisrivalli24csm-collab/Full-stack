@@ -1,0 +1,624 @@
+/* =========================================================
+   OBSERVATION TASK 3
+   Interactive To-Do List
+   CSS Styling
+   ========================================================= */
+
+
+/* ---------- Basic Reset ---------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ---------- Page ---------- */
+
+body {
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #eeeae2;
+    color: #171717;
+    padding: 35px 20px;
+}
+
+
+/* ---------- Main Container ---------- */
+
+.page-container {
+    width: 100%;
+    max-width: 1050px;
+    margin: 0 auto;
+    background: #f8f6f1;
+    border: 1px solid #d8d3c9;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================================================
+   HERO SECTION
+   ========================================================= */
+
+.hero-section {
+    background: #171717;
+    color: #ffffff;
+    padding: 42px 50px 48px;
+}
+
+
+/* ---------- Brand ---------- */
+
+.brand-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 65px;
+}
+
+
+.brand-mark {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #d7b56d;
+    color: #171717;
+
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+.brand-name {
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+
+.brand-tag {
+    margin-top: 3px;
+    color: #aaa69d;
+    font-size: 9px;
+    letter-spacing: 1.5px;
+}
+
+
+/* ---------- Hero Content ---------- */
+
+.eyebrow {
+    color: #d7b56d;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 14px;
+}
+
+
+.hero-content h1 {
+    max-width: 700px;
+    font-size: clamp(38px, 6vw, 65px);
+    line-height: 1;
+    letter-spacing: -2.5px;
+    font-weight: 700;
+}
+
+
+.hero-content h1 span {
+    color: #d7b56d;
+}
+
+
+.hero-description {
+    max-width: 550px;
+    margin-top: 22px;
+    color: #b8b5ae;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   TODO SECTION
+   ========================================================= */
+
+.todo-section {
+    padding: 45px 50px 50px;
+}
+
+
+/* ---------- Section Heading ---------- */
+
+.section-heading,
+.list-heading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+
+.small-label {
+    color: #8b8579;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 1.8px;
+    margin-bottom: 7px;
+}
+
+
+.section-heading h2,
+.list-heading h2 {
+    font-size: 25px;
+    letter-spacing: -0.5px;
+}
+
+
+.task-counter {
+    border: 1px solid #d4cec2;
+    padding: 8px 12px;
+    border-radius: 30px;
+
+    color: #756f64;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+
+/* =========================================================
+   TASK INPUT
+   ========================================================= */
+
+.task-input-box {
+    padding-bottom: 42px;
+    border-bottom: 1px solid #ddd8cf;
+}
+
+
+.task-form {
+    display: flex;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+
+.task-form input {
+    flex: 1;
+    min-width: 0;
+
+    padding: 17px 18px;
+
+    border: 1px solid #d2cdc3;
+    border-radius: 4px;
+
+    background: #ffffff;
+    color: #222222;
+
+    font-size: 14px;
+    outline: none;
+
+    transition: 0.2s ease;
+}
+
+
+.task-form input::placeholder {
+    color: #aaa59c;
+}
+
+
+.task-form input:focus {
+    border-color: #171717;
+    box-shadow: 0 0 0 3px rgba(215, 181, 109, 0.18);
+}
+
+
+/* ---------- Add Button ---------- */
+
+#addTaskButton {
+    min-width: 135px;
+
+    border: none;
+    border-radius: 4px;
+
+    background: #171717;
+    color: #ffffff;
+
+    font-size: 13px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+
+#addTaskButton span {
+    color: #d7b56d;
+    font-size: 18px;
+    margin-right: 4px;
+}
+
+
+#addTaskButton:hover {
+    background: #2d2d2d;
+    transform: translateY(-1px);
+}
+
+
+#addTaskButton:active {
+    transform: translateY(0);
+}
+
+
+/* ---------- Input Message ---------- */
+
+.input-message {
+    min-height: 18px;
+    margin-top: 8px;
+
+    color: #a55d45;
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   TASK LIST
+   ========================================================= */
+
+.task-list-box {
+    padding-top: 40px;
+}
+
+
+.task-list {
+    margin-top: 22px;
+}
+
+
+/* =========================================================
+   EMPTY MESSAGE
+   ========================================================= */
+
+.empty-message {
+    padding: 55px 20px;
+    border: 1px dashed #cec8bd;
+    text-align: center;
+}
+
+
+.empty-icon {
+    width: 48px;
+    height: 48px;
+
+    margin: 0 auto 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #e9dfca;
+    color: #856a32;
+
+    font-size: 21px;
+    font-weight: bold;
+}
+
+
+.empty-message h3 {
+    font-size: 18px;
+    margin-bottom: 7px;
+}
+
+
+.empty-message p {
+    color: #888278;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   DYNAMIC TASK ITEM
+   ========================================================= */
+
+.task-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    padding: 17px 18px;
+
+    margin-bottom: 10px;
+
+    background: #ffffff;
+    border: 1px solid #ddd8cf;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+
+.task-item:hover {
+    transform: translateX(3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+
+/* ---------- Task Number / Indicator ---------- */
+
+.task-indicator {
+    width: 30px;
+    height: 30px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #c9c2b6;
+    border-radius: 50%;
+
+    color: #777168;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+
+/* ---------- Task Text ---------- */
+
+.task-text {
+    flex: 1;
+    min-width: 0;
+
+    color: #292724;
+    font-size: 14px;
+    line-height: 1.5;
+
+    overflow-wrap: anywhere;
+}
+
+
+/* ---------- Buttons ---------- */
+
+.task-actions {
+    display: flex;
+    gap: 7px;
+    flex-shrink: 0;
+}
+
+
+.complete-button,
+.delete-button {
+    border: none;
+    padding: 9px 12px;
+
+    border-radius: 3px;
+
+    font-size: 11px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+
+.complete-button {
+    background: #eee8dc;
+    color: #5f5138;
+}
+
+
+.complete-button:hover {
+    background: #d7b56d;
+    color: #171717;
+}
+
+
+.delete-button {
+    background: #f1eeee;
+    color: #8b5147;
+}
+
+
+.delete-button:hover {
+    background: #dfc8c3;
+    color: #63372f;
+}
+
+
+/* =========================================================
+   COMPLETED TASK
+   ========================================================= */
+
+.task-item.completed {
+    background: #f1efe9;
+    opacity: 0.72;
+}
+
+
+.task-item.completed .task-indicator {
+    background: #171717;
+    border-color: #171717;
+    color: #d7b56d;
+}
+
+
+.task-item.completed .task-text {
+    color: #77736c;
+    text-decoration: line-through;
+    text-decoration-thickness: 1.5px;
+}
+
+
+.task-item.completed .complete-button {
+    background: #171717;
+    color: #d7b56d;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.footer {
+    padding: 20px 50px;
+
+    border-top: 1px solid #ddd8cf;
+
+    background: #f1eee8;
+
+    text-align: center;
+
+    color: #918b80;
+    font-size: 10px;
+    letter-spacing: 0.8px;
+}
+
+
+.footer span {
+    margin: 0 6px;
+    color: #b4965d;
+}
+
+
+/* =========================================================
+   RESPONSIVE DESIGN
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    body {
+        padding: 15px;
+    }
+
+
+    .hero-section {
+        padding: 32px 25px 38px;
+    }
+
+
+    .brand-row {
+        margin-bottom: 45px;
+    }
+
+
+    .hero-content h1 {
+        font-size: 43px;
+        letter-spacing: -1.8px;
+    }
+
+
+    .todo-section {
+        padding: 32px 25px 35px;
+    }
+
+
+    .task-form {
+        flex-direction: column;
+    }
+
+
+    #addTaskButton {
+        min-height: 48px;
+    }
+
+
+    .task-item {
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+
+    .task-text {
+        padding-top: 5px;
+    }
+
+
+    .task-actions {
+        width: 100%;
+        margin-left: 45px;
+    }
+
+
+    .complete-button,
+    .delete-button {
+        flex: 1;
+    }
+
+
+    .footer {
+        padding: 18px 25px;
+    }
+}
+
+
+@media (max-width: 450px) {
+
+    body {
+        padding: 0;
+    }
+
+
+    .page-container {
+        border: none;
+    }
+
+
+    .hero-section {
+        padding: 28px 20px 35px;
+    }
+
+
+    .todo-section {
+        padding: 28px 20px 32px;
+    }
+
+
+    .section-heading h2,
+    .list-heading h2 {
+        font-size: 21px;
+    }
+
+
+    .task-counter {
+        font-size: 8px;
+        padding: 7px 9px;
+    }
+
+
+    .hero-content h1 {
+        font-size: 36px;
+    }
+
+
+    .hero-description {
+        font-size: 13px;
+    }
+
+
+    .task-item {
+        padding: 14px;
+    }
+
+
+    .task-actions {
+        margin-left: 0;
+    }
+
+
+    .footer {
+        padding: 17px 20px;
+    }
+}
