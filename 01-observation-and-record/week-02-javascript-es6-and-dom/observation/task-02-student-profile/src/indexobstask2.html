@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Spotlight</title>
+
+    <link rel="stylesheet" href="styleobstask2.css">
+</head>
+
+<body>
+
+    <main class="page-wrapper">
+
+        <!-- Left side: Introduction -->
+        <section class="intro-panel">
+
+            <div class="brand">
+                <span class="brand-mark">SP</span>
+                <span>Student Spotlight</span>
+            </div>
+
+            <div class="intro-content">
+                <p class="tag">JAVASCRIPT • DOM</p>
+
+                <h1>
+                    Create your
+                    <span>student profile.</span>
+                </h1>
+
+                <p class="intro-text">
+                    Enter your academic details and generate a
+                    personalized student profile using JavaScript
+                    classes and DOM manipulation.
+                </p>
+            </div>
+
+            <div class="tech-note">
+                <span>JS CLASS</span>
+                <span>DOM</span>
+                <span>EVENTS</span>
+            </div>
+
+        </section>
+
+
+        <!-- Right side: Form and generated profile -->
+        <section class="workspace">
+
+            <div class="form-box">
+
+                <div class="section-heading">
+                    <div>
+                        <p class="small-title">PROFILE BUILDER</p>
+                        <h2>Student Details</h2>
+                    </div>
+
+                    <span class="step-number">01</span>
+                </div>
+
+
+                <form id="studentForm">
+
+                    <div class="input-group">
+                        <label for="studentName">Full Name</label>
+                        <input
+                            type="text"
+                            id="studentName"
+                            placeholder="e.g. Ravi Kumar"
+                            required
+                        >
+                    </div>
+
+
+                    <div class="input-group">
+                        <label for="rollNumber">Roll Number</label>
+                        <input
+                            type="text"
+                            id="rollNumber"
+                            placeholder="e.g. A23126552001"
+                            required
+                        >
+                    </div>
+
+
+                    <div class="two-columns">
+
+                        <div class="input-group">
+                            <label for="department">Department</label>
+                            <input
+                                type="text"
+                                id="department"
+                                placeholder="e.g. CSE (AI & ML)"
+                                required
+                            >
+                        </div>
+
+                        <div class="input-group">
+                            <label for="cgpa">CGPA</label>
+                            <input
+                                type="number"
+                                id="cgpa"
+                                min="0"
+                                max="10"
+                                step="0.01"
+                                placeholder="8.42"
+                                required
+                            >
+                        </div>
+
+                    </div>
+
+
+                    <button type="submit" id="generateButton">
+                        Generate Profile
+                        <span>→</span>
+                    </button>
+
+                </form>
+
+            </div>
+
+
+            <!-- Dynamic profile will appear here -->
+            <div id="profileArea">
+
+                <div class="empty-state">
+                    <div class="empty-icon">+</div>
+
+                    <h3>Your profile will appear here</h3>
+
+                    <p>
+                        Fill in the details and click
+                        <strong>Generate Profile</strong>.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        <p>Observation Task 2 • JavaScript Class & DOM Manipulation</p>
+    </footer>
+
+
+    <script src="scriptobstask2.js"></script>
+
+</body>
+</html>

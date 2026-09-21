@@ -1,0 +1,241 @@
+/* ================= GENERAL STYLING ================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #222;
+}
+
+
+/* ================= HEADER ================= */
+
+header {
+    padding: 30px;
+    text-align: center;
+
+    /* Gradient background */
+    background: linear-gradient(135deg, #4facfe, #6a5acd);
+
+    color: white;
+
+    /* Text shadow */
+    text-shadow: 2px 2px 4px #333;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+header p {
+    font-family: Georgia, serif;
+    font-size: 18px;
+}
+
+
+/* ================= NAVIGATION ================= */
+
+nav {
+    background-color: #222;
+    padding: 15px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    margin: 0 15px;
+    padding: 8px 12px;
+
+    /* Rounded corners */
+    border-radius: 6px;
+}
+
+/* Navigation hover effect */
+
+nav a:hover {
+    background-color: #4facfe;
+    color: black;
+}
+
+
+/* ================= SECTIONS ================= */
+
+section {
+    padding: 30px;
+    margin: 20px auto;
+    max-width: 1000px;
+}
+
+section h2 {
+    text-align: center;
+    font-family: Georgia, serif;
+    font-size: 28px;
+
+    text-shadow: 1px 1px 2px #aaa;
+}
+
+
+/* ================= CANVAS ================= */
+
+canvas {
+    display: block;
+    margin: 20px auto;
+
+    background-color: white;
+
+    border: 3px solid #333;
+
+    border-radius: 12px;
+
+    /* Box shadow */
+    box-shadow: 0 5px 15px #999;
+}
+
+
+/* ================= CARD CONTAINER ================= */
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+
+/* ================= CARDS ================= */
+
+.card {
+    width: 280px;
+
+    background-color: white;
+
+    border: 2px solid #ddd;
+
+    border-radius: 15px;
+
+    padding: 25px;
+
+    margin: 10px;
+
+    box-shadow: 0 5px 15px #bbb;
+
+    text-align: center;
+
+    transition: 0.3s;
+}
+
+.card h3 {
+    font-family: Georgia, serif;
+    font-size: 24px;
+}
+
+.card p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+
+/* Card hover effect */
+
+.card:hover {
+    transform: translateY(-8px);
+
+    box-shadow: 0 10px 25px #888;
+}
+
+
+/* ================= BUTTON ================= */
+
+button {
+    background-color: #4facfe;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 8px;
+
+    padding: 10px 20px;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+/* Button hover effect */
+
+button:hover {
+    background-color: #222;
+
+    color: white;
+
+    transform: scale(1.05);
+}
+
+
+/* ================= CONTACT ================= */
+
+#contact {
+    text-align: center;
+
+    background: linear-gradient(
+        135deg,
+        #ffffff,
+        #e8f4ff
+    );
+
+    border: 1px solid #ddd;
+
+    border-radius: 12px;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+    margin-top: 30px;
+
+    padding: 20px;
+
+    background-color: #222;
+
+    color: white;
+
+    text-align: center;
+
+    font-size: 14px;
+}
+
+
+/* ================= RESPONSIVE DESIGN ================= */
+
+@media (max-width: 700px) {
+
+    header h1 {
+        font-size: 28px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 5px;
+    }
+
+    canvas {
+        width: 100%;
+        height: auto;
+    }
+
+    .card {
+        width: 90%;
+    }
+}

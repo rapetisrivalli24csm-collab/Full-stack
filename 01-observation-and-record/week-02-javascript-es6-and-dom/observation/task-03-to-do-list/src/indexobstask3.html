@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Task Board | Interactive To-Do List</title>
+
+    <!-- External CSS file -->
+    <link rel="stylesheet" href="styleobstask3.css">
+</head>
+
+<body>
+
+    <main class="page-container">
+
+        <!-- Header section -->
+        <header class="hero-section">
+
+            <div class="brand-row">
+                <div class="brand-mark">✓</div>
+
+                <div>
+                    <p class="brand-name">TASK BOARD</p>
+                    <p class="brand-tag">JAVASCRIPT • DOM</p>
+                </div>
+            </div>
+
+            <div class="hero-content">
+                <p class="eyebrow">OBSERVATION TASK 3</p>
+
+                <h1>
+                    Stay organized.<br>
+                    <span>Get things done.</span>
+                </h1>
+
+                <p class="hero-description">
+                    Add your tasks, mark them complete, and remove
+                    them whenever they are no longer needed.
+                </p>
+            </div>
+
+        </header>
+
+
+        <!-- Main application area -->
+        <section class="todo-section">
+
+            <!-- Add task area -->
+            <div class="task-input-box">
+
+                <div class="section-heading">
+                    <div>
+                        <p class="small-label">YOUR WORKSPACE</p>
+                        <h2>Create a task</h2>
+                    </div>
+
+                    <span class="task-counter" id="taskCounter">0 TASKS</span>
+                </div>
+
+                <!-- Form is used so Enter can also add a task -->
+                <form id="taskForm" class="task-form">
+
+                    <input
+                        type="text"
+                        id="taskInput"
+                        placeholder="Enter a task..."
+                        autocomplete="off"
+                    >
+
+                    <button type="submit" id="addTaskButton">
+                        <span>+</span>
+                        Add Task
+                    </button>
+
+                </form>
+
+                <p id="inputMessage" class="input-message"></p>
+
+            </div>
+
+
+            <!-- Task list area -->
+            <div class="task-list-box">
+
+                <div class="list-heading">
+                    <div>
+                        <p class="small-label">TODAY</p>
+                        <h2>Your tasks</h2>
+                    </div>
+                </div>
+
+                <!-- JavaScript dynamically adds tasks here -->
+                <div id="taskList" class="task-list">
+
+                    <!-- Empty message shown when there are no tasks -->
+                    <div id="emptyMessage" class="empty-message">
+
+                        <div class="empty-icon">✓</div>
+
+                        <h3>All clear</h3>
+
+                        <p>
+                            No tasks available.<br>
+                            Add a new task to get started.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Footer -->
+        <footer class="footer">
+
+            <p>
+                Interactive To-Do List
+                <span>•</span>
+                DOM & Event Listeners
+            </p>
+
+        </footer>
+
+    </main>
+
+
+    <!-- External JavaScript file -->
+    <script src="scriptobstask3.js"></script>
+
+</body>
+
+</html>

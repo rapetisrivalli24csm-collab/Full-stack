@@ -1,0 +1,19 @@
+{
+  "name": "q7-npm-package-json",
+  "version": "1.0.0",
+  "description": "Demonstration of NPM and package.json",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "keywords": [
+    "node",
+    "npm",
+    "package-json"
+  ],
+  "author": "R. Srivalli",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^4.1.2"
+  }
+}

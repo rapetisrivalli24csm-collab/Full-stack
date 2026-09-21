@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Defines character encoding -->
+    <meta charset="UTF-8">
+
+    <!-- Makes the webpage responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Styled Webpage</title>
+
+    <!-- Linking external CSS file -->
+    <link rel="stylesheet" href="styleobstask1.2.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+    <header>
+        <h1>My Styled Webpage</h1>
+        <p>HTML5 Graphics and CSS3 Web Styling</p>
+    </header>
+
+
+    <!-- ================= NAVIGATION ================= -->
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#canvas">Canvas</a>
+        <a href="#cards">Cards</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+
+    <!-- ================= CANVAS SECTION ================= -->
+    <section id="canvas">
+
+        <h2>HTML5 Canvas</h2>
+
+        <!-- Canvas drawing area -->
+        <canvas id="myCanvas"
+                width="600"
+                height="300">
+            Your browser does not support HTML5 Canvas.
+        </canvas>
+
+    </section>
+
+
+    <!-- ================= CONTENT CARDS ================= -->
+    <section id="cards">
+
+        <h2>Our Features</h2>
+
+        <div class="card-container">
+
+            <!-- Card 1 -->
+            <div class="card">
+
+                <h3>HTML5</h3>
+
+                <p>
+                    HTML5 provides modern elements for creating
+                    structured and interactive webpages.
+                </p>
+
+                <button>Learn More</button>
+
+            </div>
+
+
+            <!-- Card 2 -->
+            <div class="card">
+
+                <h3>CSS3</h3>
+
+                <p>
+                    CSS3 is used to design webpages using colors,
+                    fonts, borders, shadows and layouts.
+                </p>
+
+                <button>Learn More</button>
+
+            </div>
+
+
+            <!-- Card 3 -->
+            <div class="card">
+
+                <h3>Graphics</h3>
+
+                <p>
+                    HTML5 Canvas allows developers to create
+                    shapes, lines and text dynamically.
+                </p>
+
+                <button>Learn More</button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CONTACT SECTION ================= -->
+    <section id="contact">
+
+        <h2>Contact</h2>
+
+        <p>
+            Thank you for visiting My Styled Webpage.
+        </p>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+    <footer>
+
+        <p>
+            &copy; 2026 My Styled Webpage | HTML5 & CSS3
+        </p>
+
+    </footer>
+
+
+    <!-- ================= CANVAS JAVASCRIPT ================= -->
+    <script>
+
+        // Get the Canvas element
+        const canvas = document.getElementById("myCanvas");
+
+        // Get the 2D drawing context
+        const ctx = canvas.getContext("2d");
+
+
+        // ----------- Draw Rectangle -----------
+
+        ctx.fillStyle = "lightblue";
+
+        ctx.fillRect(50, 50, 150, 80);
+
+
+        // ----------- Draw Circle -----------
+
+        ctx.beginPath();
+
+        ctx.arc(320, 90, 45, 0, 2 * Math.PI);
+
+        ctx.fillStyle = "lightgreen";
+
+        ctx.fill();
+
+        ctx.stroke();
+
+
+        // ----------- Draw Line -----------
+
+        ctx.beginPath();
+
+        ctx.moveTo(400, 50);
+
+        ctx.lineTo(520, 130);
+
+        ctx.strokeStyle = "black";
+
+        ctx.lineWidth = 3;
+
+        ctx.stroke();
+
+
+        // ----------- Display Name -----------
+
+        ctx.font = "24px Arial";
+
+        ctx.fillStyle = "black";
+
+        ctx.fillText("R. Srivalli", 210, 230);
+
+    </script>
+
+</body>
+
+</html>

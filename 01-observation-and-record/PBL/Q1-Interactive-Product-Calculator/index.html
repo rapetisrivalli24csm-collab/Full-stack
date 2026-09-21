@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>QuickCart | Product Calculator</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="page">
+
+        <section class="calculator">
+
+            <div class="top-bar">
+                <div class="brand">
+                    <span class="brand-mark">QC</span>
+                    <div>
+                        <h1>QuickCart</h1>
+                        <p>Instant price studio</p>
+                    </div>
+                </div>
+
+                <span class="status">LIVE</span>
+            </div>
+
+            <div class="intro">
+                <p class="eyebrow">PRODUCT DESK / 01</p>
+                <h2>Build your order.</h2>
+                <p>
+                    Enter the product details and watch your payable amount
+                    update instantly.
+                </p>
+            </div>
+
+            <div class="form-area">
+
+                <div class="field full-width">
+                    <label for="productName">PRODUCT NAME</label>
+
+                    <div class="input-wrapper">
+                        <span class="input-symbol">✦</span>
+
+                        <input
+                            type="text"
+                            id="productName"
+                            placeholder="e.g. Wireless Headphones"
+                            autocomplete="off"
+                        >
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label for="quantity">QUANTITY</label>
+
+                    <input
+                        type="number"
+                        id="quantity"
+                        placeholder="01"
+                        min="1"
+                        step="1"
+                    >
+                </div>
+
+                <div class="field">
+                    <label for="price">PRICE / UNIT</label>
+
+                    <div class="price-input">
+                        <span>₹</span>
+
+                        <input
+                            type="number"
+                            id="price"
+                            placeholder="0.00"
+                            min="0"
+                            step="0.01"
+                        >
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="message" class="message"></div>
+
+            <div class="receipt">
+
+                <div class="receipt-heading">
+                    <span>ORDER SUMMARY</span>
+                    <span>#CALC-01</span>
+                </div>
+
+                <div class="receipt-line">
+                    <span>Product</span>
+                    <strong id="displayProduct">Not selected</strong>
+                </div>
+
+                <div class="receipt-line">
+                    <span>Quantity</span>
+                    <strong id="displayQuantity">—</strong>
+                </div>
+
+                <div class="receipt-line">
+                    <span>Unit price</span>
+                    <strong id="displayPrice">₹0.00</strong>
+                </div>
+
+                <div class="dotted-line"></div>
+
+                <div class="total-row">
+                    <div>
+                        <span>ESTIMATED TOTAL</span>
+                        <small>Updated automatically</small>
+                    </div>
+
+                    <strong id="totalPrice">₹0.00</strong>
+                </div>
+
+            </div>
+
+            <footer>
+                <span>NO REFRESH REQUIRED</span>
+                <span>● READY</span>
+            </footer>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
