@@ -1,0 +1,19 @@
+{
+  "name": "q3-express-student-server",
+  "version": "1.0.0",
+  "description": "Express.js Student Information Server for PBL",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "student-server"
+  ],
+  "author": "R. Srivalli",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
